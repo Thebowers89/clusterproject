@@ -22,6 +22,8 @@ The command will take these arguments:
 - Ending point
 - Chunk size
 
+The start and endpoints in the context of the **server** are considered the global start and endpoints. When the **server** distributes instructions, local start and endpoints are given as to not have duplicate jobs and to not have long response times in calculating data.
+
 ### Client instructions
 
 The instructions are going to be in the order of:
@@ -29,7 +31,8 @@ The instructions are going to be in the order of:
 - Job ID
 - Starting point
 - Ending point
-- Chunk size
+
+The starting points and ending points are going to be computed by the **server** as determined by **chunk size**.
 
 ### Job ID
 
@@ -37,6 +40,8 @@ The **server** will mainly use this to keep track of the data being returned and
 
 ### Starting point
 
+The starting point is the integer from which calculations will start.
+
 ### Ending point
 
-### Chunk size
+The ending point is the integer that will signify the end of the calculations.
